@@ -1,0 +1,273 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.titulo {
+    font-size: 24px;
+    margin-top: 20px;
+}
+/* Estilo para el fondo */
+body.colores {
+    background: linear-gradient(135deg, #b0e0e6, #87ceeb); /* Cambia los valores de color a tu preferencia */
+    text-align: center; /* Para centrar el contenido */
+    font-family: Arial, sans-serif; /* Fuente del texto */
+}
+/* Estilo para el fondo */
+body.colores {
+    background-color: #b0e0e6; /* Color de fondo */
+    text-align: center; /* Para centrar el contenido */
+    font-family: Arial, sans-serif; /* Fuente del texto */
+    overflow: hidden; /* Oculta cualquier contenido que se desborde */
+}
+
+/* Estilo para los círculos */
+.circle {
+    position: absolute; /* Posición absoluta para que se superpongan */
+    width: 100px; /* Ancho del círculo */
+    height: 100px; /* Altura del círculo */
+    border-radius: 50%; /* Forma circular */
+    opacity: 0.7; /* Opacidad del círculo */
+    animation: move 5s infinite ease-in-out; /* Animación para mover los círculos */
+}
+
+/* Estilo para los círculos de colores primarios */
+.circle.primary {
+    background-color: #FF0000; /* Color del círculo primario (rojo) */
+}
+
+/* Estilo para los círculos de colores secundarios */
+.circle.secondary {
+    background-color: #00FF00; /* Color del círculo secundario (verde) */
+}
+
+/* Estilo para los círculos de colores terciarios */
+.circle.tertiary {
+    background-color: #0000FF; /* Color del círculo terciario (azul) */
+}
+
+/* Animación para mover los círculos */
+@keyframes move {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(100px, 100px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}.color-picker {
+    background-color: #333333; /* Cambia el valor de color a tu preferencia */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 250px;
+}
+
+/* Resto de los estilos permanecen sin cambios */
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.boton {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #2980b9;
+}
+
+.no-activo {
+    background-color: #ccc;
+    pointer-events: none;
+}
+
+/* Estilos para la página colores.html */
+body.colores {
+    background-color: #5f636d;
+}
+
+.color-picker {
+    text-align: center;
+    margin-right: 20px;
+}
+
+.color-info {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+h3 {
+    margin-top: 10px;
+}
+
+#monochromatic, #complementary, #split-complementary, #analogous {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.color-box {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border: 1px solid #000;
+}
+
+/* modificar el color de la pag principal */
+body.index {
+    background-color: rgb(67, 14, 138);
+}
+
+/* Estilos para la subventana (modal) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-contenido {
+    background-color: #2e46b1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cerrar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Estilo para el iframe de la subventana */
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.color-input {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+}
+.color-canvas {
+    cursor: crosshair;
+}
+body {
+    background: linear-gradient(to bottom, #f2f2f2, #ffffff);
+}.contenedor {
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}.titulo {
+    font-size: 36px;
+}.boton:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}.figura {
+    border: 1px solid #333;
+}.figuras {
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.figura {
+    width: 80px;
+    height: 80px;
+}
+-----------------------------------------------------------------------------------------
+/* Estilos para la página colores.html */
+body.colores {
+    background-color: rgb(48, 137, 172); /* Cambia este valor a tu elección de color de fondo */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.color-picker {
+    margin-bottom: 20px;
+}
+
+.color-info {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+h3 {
+    margin-top: 10px;
+}
+
+.color-box {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border: 1px solid #000;
+}
+
+#selected-color {
+    font-weight: bold;
+}
+
+/* Estilos para el input de color */
+#color-input {
+    width: 100px;
+    height: 30px;
+}
+/* Estilo del botón de la imagen */
+.image-button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px; /* Añade espacio alrededor de la imagen para que parezca un botón */
+    border-radius: 5px; /* Añade esquinas redondeadas */
+    cursor: pointer;
+  }
+  
+  /* Estilo para cambiar el color del botón al pasar el ratón por encima */
+  .image-button:hover {
+    background-color: #0056b3;
+  }
+  

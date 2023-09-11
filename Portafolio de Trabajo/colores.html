@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Explorer</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+        /* Estilo para el fondo azul claro */
+        body.colores {
+            background-color: #b0e0e6; /* Cambia el valor de color a tu preferencia */
+            text-align: center; /* Para centrar el contenido */
+            font-family: Arial, sans-serif; /* Fuente del texto */
+        }
+        /* Estilo para el contenedor principal */
+        .color-container {
+            display: flex;
+            align-items: center; /* Alinea los elementos al centro horizontalmente */
+            justify-content: center; /* Alinea los elementos al centro verticalmente */
+            height: 100vh; /* Aprovecha toda la altura de la ventana */
+            flex-direction: row-reverse; /* Cambia la dirección de flexión a horizontal inverso */
+        }
+        .color-picker {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 250px;
+        }
+        /* Estilo para "Selecciona un color" */
+        .color-picker label {
+            text-align: left; /* Alinea el texto a la izquierda */
+            padding-left: 10px; /* Agrega un poco de espacio a la izquierda */
+            font-weight: bold; /* Texto en negrita */
+        }
+        /* Estilo para el color seleccionado */
+        #selected-color {
+            color: #FF0000; /* Cambia el color a tu preferencia */
+        }
+        /* Estilo para las secciones de colores */
+        h3 {
+            margin-top: 20px; /* Agrega espacio superior */
+            font-size: 18px; /* Tamaño de fuente mayor */
+            font-weight: bold; /* Texto en negrita */
+        }
+        #monochromatic,
+        #complementary,
+        #split-complementary,
+        #analogous {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px; /* Agrega espacio inferior */
+        }
+        .color-box {
+            width: 50px;
+            height: 50px;
+            margin: 0 5px; /* Espacio horizontal entre los cuadros de color */
+            border-radius: 50%; /* Forma circular */
+        }
+        /* Otros estilos pueden permanecer sin cambios */
+    </style>
+</head>
+<body class="colores">
+    <div class="color-container">
+        <div class="color-info">
+            <h2>Color seleccionado: <span id="selected-color">#FF0000</span></h2>
+            <h3>Monocromáticos:</h3>
+            <div id="monochromatic"></div>
+            <h3>Complementario:</h3>
+            <div id="complementary"></div>
+            <h3>Complementarios Divididos:</h3>
+            <div id="split-complementary"></div>
+            <h3>Análogos:</h3>
+            <div id="analogous"></div>
+        </div>
+        <div class="color-picker">
+            <label for="color-input">Selecciona un color:</label>
+            <!-- El atributo autofocus hace que el color picker esté visible automáticamente -->
+            <input type="color" id="color-input" class="color-input" value="#FF0000" autofocus>
+            <div class="color-preview" id="color-preview"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        // Obtener el elemento color-input
+        const colorInput = document.getElementById("color-input");
+
+        // Agregar un evento input al color picker para cambiar el fondo de la página
+        colorInput.addEventListener("input", function() {
+            // Obtener el valor de color seleccionado
+            const selectedColor = colorInput.value;
+
+            // Cambiar el fondo de la página al color seleccionado
+            document.body.style.backgroundColor = selectedColor;
+
+            // Cambiar el color del texto "Color seleccionado"
+            document.getElementById("selected-color").style.color = selectedColor;
+        });
+    </script>
+</body>
+</html>
